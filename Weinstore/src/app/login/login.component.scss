@@ -1,0 +1,61 @@
+form {
+    max-width: 500px;
+    margin:0 auto;
+    margin-top:5%;
+    box-shadow: rgba(19, 19, 26, 0.2) 0px 7px 29px 0px;
+    border: 1px solid rgb(226, 226, 226);
+    padding: 20px;
+}
+#user_name,
+#user_password
+{
+width:300px;
+}
+.form-group {
+    display: flex;
+    align-items: baseline;
+    justify-content: left;
+    margin-top: 5px;
+    width: auto;
+}
+.form-label {
+    text-align: right;
+    margin-right: 10px;
+    min-width: 125px;
+}
+.formBtn{
+    display:flex;
+    margin:20px;
+    }
+.btn{
+    margin:auto;
+}
+.alert {
+    height: 2px;
+    font-size: 0.8em; /* Kleinere Schriftgröße */
+    color: #747474; /* Leicht grauer Text */
+    margin-top: 1px;
+    margin-bottom: 10px;
+    padding-top:1px;
+    padding-bottom: 15px;
+    padding-left:0%;
+    
+  }
+  .delete-tooltip {
+    position: absolute;
+    top: 50%;
+    right: calc(100% + 10px);
+    transform: translateY(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .error-message {
+    color: red;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
