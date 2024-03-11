@@ -1,0 +1,21 @@
+<input type="text" placeholder="Suche nach Weinname" [(ngModel)]="searchQuery" (keyup)="filterWines()">
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Typ</th>
+      <th>Herkunft</th>
+      <th>Preis</th>
+      <th>Bewertung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let wine of filteredWines">
+      <td>{{ wine.name }}</td>
+      <td>{{ wine.type }}</td>
+      <td>{{ wine.origin }}, {{ wine.region }}</td>
+      <td>{{ wine.price | currency:'EUR':'symbol':'1.2-2' }}</td>
+      <td>{{ wine.rating }}</td>
+    </tr>
+  </tbody>
+</table>
