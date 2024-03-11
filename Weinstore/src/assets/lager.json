@@ -1,0 +1,43 @@
+[
+    {
+      "name": "Château Margaux",
+      "type": "Rotwein",
+      "origin": "Frankreich",
+      "region": "Bordeaux",
+      "price": 500,
+      "rating": 4.8
+    },
+    {
+      "name": "Barolo",
+      "type": "Rotwein",
+      "origin": "Italien",
+      "region": "Piemont",
+      "price": 120,
+      "rating": 4.5
+    },
+    {
+      "name": "Chardonnay",
+      "type": "Weißwein",
+      "origin": "USA",
+      "region": "Kalifornien",
+      "price": 50,
+      "rating": 4.3
+    },
+    {
+      "name": "Rioja Reserva",
+      "type": "Rotwein",
+      "origin": "Spanien",
+      "region": "Rioja",
+      "price": 40,
+      "rating": 4.2
+    },
+    {
+      "name": "Sancerre",
+      "type": "Weißwein",
+      "origin": "Frankreich",
+      "region": "Loire",
+      "price": 35,
+      "rating": 4.6
+    }
+  ]
+  
