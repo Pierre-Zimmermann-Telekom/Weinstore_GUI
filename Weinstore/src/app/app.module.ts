@@ -10,6 +10,8 @@ import { MainviewComponent } from './mainview/mainview.component';
 import { WinelistComponent } from './winelist/winelist.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    HttpClientModule
   
   ],
   providers: [
