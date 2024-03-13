@@ -18,6 +18,7 @@ export class WinelistComponent implements OnInit {
     this.http.get<Wine[]>('assets/lager.json').subscribe(data => {
       this.wines = data;
       this.filteredWines = [...this.wines];
+      console.log(this.wines)
     });
   }
 
