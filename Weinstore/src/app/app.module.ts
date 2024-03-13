@@ -9,6 +9,7 @@ import { RouterModule } from '@angular/router';
 import { MainviewComponent } from './mainview/mainview.component';
 import { WinelistComponent } from './winelist/winelist.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    MatSlideToggleModule
+  
   ],
   providers: [
     provideAnimationsAsync()
