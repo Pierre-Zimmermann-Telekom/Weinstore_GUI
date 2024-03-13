@@ -7,7 +7,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { BrowserModule } from '@angular/platform-browser';
-import { provideAnimationsAsync, provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -32,8 +32,7 @@ import { WinelistComponent } from './winelist/winelist.component';
     MatInputModule,
     MatSelectModule,
     MatCardModule,
-    MatSlideToggleModule,
-    HttpClientModule
+    HttpClientModule,
 
   ],
   providers: [provideAnimationsAsync()],
