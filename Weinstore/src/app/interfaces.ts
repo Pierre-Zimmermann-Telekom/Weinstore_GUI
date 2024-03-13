@@ -1,6 +1,6 @@
 export interface User {
     name:string,
-    email: string,
+    usertype: string,
     password: string
   }
 
@@ -19,7 +19,6 @@ export interface User {
   export interface Wine_versand {
     Produktnummer: string;
     Bezeichnung: string;
-    Lagerort: string;
     Verkaufspreis: string;
   }
 

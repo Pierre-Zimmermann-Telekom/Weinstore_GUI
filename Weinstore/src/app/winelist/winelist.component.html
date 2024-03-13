@@ -1,21 +1,31 @@
-<input type="text" placeholder="Suche nach Weinname" [(ngModel)]="searchQuery" (keyup)="filterWines()">
+<input type="text" placeholder="Suche nach Produktbezeichnung oder Produktnummer" [(ngModel)]="searchQuery" (keyup)="filterWines()">
 <table>
   <thead>
     <tr>
+      <th>Produktnummer</th>
       <th>Name</th>
-      <th>Typ</th>
-      <th>Herkunft</th>
-      <th>Preis</th>
-      <th>Bewertung</th>
+      <th>Jahrgang</th>
+      <th>Region</th>
+      <th>Land</th>
+      <th>Bestand</th>
+      <th>Lagerort</th>
+      <th>Verkaufspreis</th>
+      <th>Einkaufspreis</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let wine of filteredWines">
-      <td>{{ wine.name }}</td>
-      <td>{{ wine.type }}</td>
-      <td>{{ wine.origin }}, {{ wine.region }}</td>
-      <td>{{ wine.price | currency:'EUR':'symbol':'1.2-2' }}</td>
-      <td>{{ wine.rating }}</td>
+      <td>{{ wine.Produktnummer }}</td>
+      <td>{{ wine.Bezeichnung }}</td>
+      <td>{{ wine.Jahrgang }}</td>
+      <td>{{ wine.Region }}</td>
+      <td>{{ wine.Land }}</td>
+      <td>{{ wine.Bestand }}</td>
+      <td>{{ wine.Lagerort }}</td>
+      <td>{{ wine.Verkaufspreis | currency:'EUR':'symbol':'1.2-2' }}</td>
+      <td>{{ wine.Einkaufspreis | currency:'EUR':'symbol':'1.2-2' }}</td>
     </tr>
   </tbody>
 </table>
+<button (click)="openNewWineDialog()">Neue Weine hinzufügen</button>
+

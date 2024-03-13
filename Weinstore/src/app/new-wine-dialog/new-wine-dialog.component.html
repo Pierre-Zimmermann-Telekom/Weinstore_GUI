@@ -1,0 +1,51 @@
+<h2>Neue Weine hinzufügen</h2>
+
+<form>
+  <mat-form-field appearance="fill">
+    <mat-label>Produktnummer</mat-label>
+    <input matInput placeholder="Produktnummer" name="Produktnummer" [(ngModel)]="newWine.Produktnummer">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Bezeichnung</mat-label>
+    <input matInput placeholder="Bezeichnung" name="Bezeichnung" [(ngModel)]="newWine.Bezeichnung">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Jahrgang</mat-label>
+    <input matInput placeholder="Jahrgang" name="Jahrgang" [(ngModel)]="newWine.Jahrgang">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Region</mat-label>
+    <input matInput placeholder="Region" name="Region" [(ngModel)]="newWine.Region">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Land</mat-label>
+    <input matInput placeholder="Land" name="Land" [(ngModel)]="newWine.Land">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Bestand</mat-label>
+    <input matInput type="number" placeholder="Bestand" name="Bestand" [(ngModel)]="newWine.Bestand">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Lagerort</mat-label>
+    <input matInput placeholder="Lagerort" name="Lagerort" [(ngModel)]="newWine.Lagerort">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Verkaufspreis</mat-label>
+    <input matInput placeholder="Verkaufspreis" name="Verkaufspreis" [(ngModel)]="newWine.Verkaufspreis">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Einkaufspreis</mat-label>
+    <input matInput placeholder="Einkaufspreis" name="Einkaufspreis" [(ngModel)]="newWine.Einkaufspreis">
+  </mat-form-field>
+
+  <button mat-button (click)="addNewWine()">Hinzufügen</button>
+  <button mat-button (click)="closeNewWineDialog()">Hinzufügen Beenden Nicht gespeicherte änderungen gehen verloren</button>
+</form>

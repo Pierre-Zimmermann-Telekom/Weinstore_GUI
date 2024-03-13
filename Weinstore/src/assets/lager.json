@@ -1,43 +1,57 @@
 [
-    {
-      "name": "Château Margaux",
-      "type": "Rotwein",
-      "origin": "Frankreich",
-      "region": "Bordeaux",
-      "price": 500,
-      "rating": 4.8
-    },
-    {
-      "name": "Barolo",
-      "type": "Rotwein",
-      "origin": "Italien",
-      "region": "Piemont",
-      "price": 120,
-      "rating": 4.5
-    },
-    {
-      "name": "Chardonnay",
-      "type": "Weißwein",
-      "origin": "USA",
-      "region": "Kalifornien",
-      "price": 50,
-      "rating": 4.3
-    },
-    {
-      "name": "Rioja Reserva",
-      "type": "Rotwein",
-      "origin": "Spanien",
-      "region": "Rioja",
-      "price": 40,
-      "rating": 4.2
-    },
-    {
-      "name": "Sancerre",
-      "type": "Weißwein",
-      "origin": "Frankreich",
-      "region": "Loire",
-      "price": 35,
-      "rating": 4.6
-    }
-  ]
-  
+  {
+    "Produktnummer": "12345",
+    "Bezeichnung": "Château Lafite Rothschild",
+    "Jahrgang": "2015",
+    "Region": "Bordeaux",
+    "Land": "Frankreich",
+    "Bestand": 10,
+    "Lagerort": "Keller 1",
+    "Verkaufspreis": "500.00",
+    "Einkaufspreis": "350.00"
+  },
+  {
+    "Produktnummer": "67890",
+    "Bezeichnung": "Sassicaia",
+    "Jahrgang": "2016",
+    "Region": "Toskana",
+    "Land": "Italien",
+    "Bestand": 5,
+    "Lagerort": "Keller 2",
+    "Verkaufspreis": "300.00",
+    "Einkaufspreis": "200.00"
+  },
+  {
+    "Produktnummer": "54321",
+    "Bezeichnung": "Opus One",
+    "Jahrgang": "2017",
+    "Region": "Napa Valley",
+    "Land": "USA",
+    "Bestand": 15,
+    "Lagerort": "Keller 3",
+    "Verkaufspreis": "400.00",
+    "Einkaufspreis": "250.00"
+  },
+  {
+    "Produktnummer": "24680",
+    "Bezeichnung": "Vega Sicilia Único",
+    "Jahrgang": "2010",
+    "Region": "Ribera del Duero",
+    "Land": "Spanien",
+    "Bestand": 8,
+    "Lagerort": "Keller 4",
+    "Verkaufspreis": "700.00",
+    "Einkaufspreis": "500.00"
+  },
+  {
+    "Produktnummer": "13579",
+    "Bezeichnung": "Penfolds Grange",
+    "Jahrgang": "2018",
+    "Region": "Barossa Valley",
+    "Land": "Australien",
+    "Bestand": 20,
+    "Lagerort": "Keller 5",
+    "Verkaufspreis": "600.00",
+    "Einkaufspreis": "400.00"
+  }
+]
