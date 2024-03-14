@@ -1,0 +1,31 @@
+.head_container {
+  display: flex;
+  margin-top: 20px;
+  align-items: baseline;
+  height: fit-content;
+  justify-content: space-between; /* Inhalt auf beiden Seiten verteilen */
+}
+.add-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black; /* Rahmen um das Add-Icon */
+  border-radius: 10%;
+  margin-left: 20px;
+  padding: 0;
+}
+
+.search_add {
+  display: flex; /* Flex-Container */
+  align-items: baseline;
+  margin-right: 20px;
+}
+
+.home-button {
+  margin-left: 20px;
+  height: 50px;
+  width: 50px;
+}
+.home-button button {
+  font-size: 50px; /* Ändere die Schriftgröße des Icons */
+}
