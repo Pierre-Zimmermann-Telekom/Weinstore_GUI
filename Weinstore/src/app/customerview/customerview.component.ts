@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
-import { customer } from '../interfaces';
 import { MatDialog } from '@angular/material/dialog';
+
 import { DataserviceService } from '../dataservice.service';
+import { customer } from '../interfaces';
 import { NewcustomerdialogComponent } from '../newcustomerdialog/newcustomerdialog.component';
+
 @Component({
   selector: 'app-customerview',
   templateUrl: './customerview.component.html',
@@ -12,6 +14,8 @@ export class CustomerviewComponent {
   customers: customer[] = [];
   filteredCustomers: customer[] = [];
   searchQuery: string = '';
+  displayedColumns: string[] = ['Vorname', 'Nachname', 'Postleitzahl', 'Ort', 'Telefonnummer', 'Email'];
+
 
   constructor(public dialog: MatDialog, private dataservice: DataserviceService) { }
 
@@ -20,6 +24,15 @@ export class CustomerviewComponent {
       this.customers = data;
       this.filteredCustomers = [...this.customers];
     });
+  }
+
+  applyFilter(event: KeyboardEvent) {
+    const filterValue = (event.target as HTMLInputElement).value.trim().toLowerCase();
+    this.filteredCustomers = this.customers.filter(customers =>
+      customers.Vorname.toLowerCase().includes(filterValue) ||
+      customers.Nachname.toString().includes(filterValue) ||
+      customers.Email.toString().includes(filterValue)
+    );
   }
 
   filterCustomers(): void {

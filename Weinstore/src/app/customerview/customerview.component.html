@@ -1,25 +1,53 @@
-<!-- customerlist.component.html -->
-<input type="text" placeholder="Suche nach Vorname, Nachname oder E-Mail" [(ngModel)]="searchQuery" (keyup)="filterCustomers()">
-<table>
-  <thead>
-    <tr>
-      <th>Vorname</th>
-      <th>Nachname</th>
-      <th>Postleitzahl</th>
-      <th>Ort</th>
-      <th>Telefonnummer</th>
-      <th>E-Mail</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let customer of filteredCustomers">
-      <td>{{ customer.Vorname }}</td>
-      <td>{{ customer.Nachname }}</td>
-      <td>{{ customer.Postleitzahl }}</td>
-      <td>{{ customer.Ort }}</td>
-      <td>{{ customer.Telefonnummer }}</td>
-      <td>{{ customer.Email }}</td>
-    </tr>
-  </tbody>
-</table>
-<button (click)="openNewCustomerDialog()">Neuen Kunden hinzufügen</button>
+
+<mat-form-field class="example-form-field">
+  <mat-label>Suche</mat-label>
+  <input
+    matInput
+    (keyup)="applyFilter($event)"
+    placeholder="Suche nach Name oder Produktnummer"
+  />
+  <button matSuffix mat-button><mat-icon >search</mat-icon></button>
+</mat-form-field>
+
+<mat-table [dataSource]="filteredCustomers" class="mat-elevation-z8">
+  <ng-container matColumnDef="Vorname">
+    <mat-header-cell *matHeaderCellDef> Vorname </mat-header-cell>
+    <mat-cell *matCellDef="let customer"> {{ customer.Vorname }} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="Nachname">
+    <mat-header-cell *matHeaderCellDef> Nachname </mat-header-cell>
+    <mat-cell *matCellDef="let customer"> {{ customer.Nachname }} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="Postleitzahl">
+    <mat-header-cell *matHeaderCellDef> Postleitzahl </mat-header-cell>
+    <mat-cell *matCellDef="let customer">
+      {{ customer.Postleitzahl }}
+    </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="Ort">
+    <mat-header-cell *matHeaderCellDef> Ort </mat-header-cell>
+    <mat-cell *matCellDef="let customer"> {{ customer.Ort }} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="Telefonnummer">
+    <mat-header-cell *matHeaderCellDef> Telefonnummer </mat-header-cell>
+    <mat-cell *matCellDef="let customer">
+      {{ customer.Telefonnummer }}
+    </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="Email">
+    <mat-header-cell *matHeaderCellDef> E-Mail </mat-header-cell>
+    <mat-cell *matCellDef="let customer"> {{ customer.Email }} </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+</mat-table>
+
+<button mat-raised-button color="primary" (click)="openNewCustomerDialog()">
+  Neuen Kunden hinzufügen
+</button>

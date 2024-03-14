@@ -1,25 +1,27 @@
 import { HttpClientModule } from '@angular/common/http';
-import { NgModule } from '@angular/core';
+import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
+import { MatTableModule } from '@angular/material/table';
 import { BrowserModule } from '@angular/platform-browser';
-import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { DataserviceService } from './dataservice.service';
-import { APP_INITIALIZER } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CustomerviewComponent } from './customerview/customerview.component';
+import { DataserviceService } from './dataservice.service';
 import { LoginComponent } from './login/login.component';
 import { MainviewComponent } from './mainview/mainview.component';
-import { WinelistComponent } from './winelist/winelist.component';
 import { NewWineDialogComponent } from './new-wine-dialog/new-wine-dialog.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CustomerviewComponent } from './customerview/customerview.component';
 import { NewcustomerdialogComponent } from './newcustomerdialog/newcustomerdialog.component';
 import { PortalComponent } from './portal/portal.component';
+import { WinelistComponent } from './winelist/winelist.component';
+
 
 @NgModule({
   declarations: [
@@ -39,11 +41,13 @@ import { PortalComponent } from './portal/portal.component';
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
+    MatIconModule,
+
     MatSelectModule,
     MatCardModule,
     HttpClientModule,
-    BrowserAnimationsModule
-
+    BrowserAnimationsModule,
+    MatTableModule,
   ],
   providers: [
     DataserviceService,
@@ -51,8 +55,8 @@ import { PortalComponent } from './portal/portal.component';
       provide: APP_INITIALIZER,
       useFactory: (dataService: DataserviceService) => dataService.initialize(),
       deps: [DataserviceService],
-      multi: true
-    }
+      multi: true,
+    },
   ],
   bootstrap: [AppComponent],
 })

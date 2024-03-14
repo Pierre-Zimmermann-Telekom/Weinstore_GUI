@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+
+import { DataserviceService } from '../dataservice.service';
 import { Wine_lager } from '../interfaces';
 import { NewWineDialogComponent } from '../new-wine-dialog/new-wine-dialog.component';
-import { MatDialog } from '@angular/material/dialog'; 
-import { DataserviceService } from '../dataservice.service';
 
 @Component({
   selector: 'app-winelist',
@@ -14,6 +15,8 @@ export class WinelistComponent implements OnInit {
   wines: Wine_lager[] = [];
   filteredWines: Wine_lager[] = [];
   searchQuery: string = '';
+  displayedColumns: string[] = ['Produktnummer', 'Name', 'Jahrgang', 'Region', 'Land', 'Bestand', 'Lagerort', 'Verkaufspreis', 'Einkaufspreis'];
+
 
   constructor(private http: HttpClient, public dialog: MatDialog, private dataservice: DataserviceService) { }
 
@@ -23,17 +26,14 @@ export class WinelistComponent implements OnInit {
       this.filteredWines = [...this.wines];
     });
   }
-
-  filterWines(): void {
-    if (this.searchQuery.trim() !== '') {
-      this.filteredWines = this.wines.filter(wine =>
-        wine.Bezeichnung.toLowerCase().includes(this.searchQuery) ||
-        wine.Produktnummer.toString().includes(this.searchQuery)
-      );
-    } else {
-      this.filteredWines = [...this.wines];
-    }
+  applyFilter(event: KeyboardEvent) {
+    const filterValue = (event.target as HTMLInputElement).value.trim().toLowerCase();
+    this.filteredWines = this.wines.filter(wine =>
+      wine.Bezeichnung.toLowerCase().includes(filterValue) ||
+      wine.Produktnummer.toString().includes(filterValue)
+    );
   }
+  
   openNewWineDialog(): void {
     const dialogRef = this.dialog.open(NewWineDialogComponent, {
       width: '600px',
