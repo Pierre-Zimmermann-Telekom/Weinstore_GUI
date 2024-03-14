@@ -4,7 +4,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { DataserviceService } from '../dataservice.service';
 import { customer } from '../interfaces';
 import { NewcustomerdialogComponent } from '../newcustomerdialog/newcustomerdialog.component';
-
+import { ShoppingCartDialogComponentComponent } from '../shopping-cart-dialog-component/shopping-cart-dialog-component.component';
 @Component({
   selector: 'app-customerview',
   templateUrl: './customerview.component.html',
@@ -14,7 +14,7 @@ export class CustomerviewComponent {
   customers: customer[] = [];
   filteredCustomers: customer[] = [];
   searchQuery: string = '';
-  displayedColumns: string[] = ['Vorname', 'Nachname', 'Postleitzahl', 'Ort', 'Telefonnummer', 'Email'];
+  displayedColumns: string[] = ['Vorname', 'Nachname', 'Postleitzahl', 'Ort', 'Telefonnummer', 'Email', 'Actions'];
 
 
   constructor(public dialog: MatDialog, private dataservice: DataserviceService) { }
@@ -56,6 +56,15 @@ export class CustomerviewComponent {
     dialogRef.afterClosed().subscribe(result => {
     });
   }
-  openCustomerDialog(customer: customer){}
-  addToCart(customer: customer){}
+  edit(){}
+  openShoppingCartDialog(customer: customer): void {
+    const dialogRef = this.dialog.open(ShoppingCartDialogComponentComponent, {
+      width: '600px',
+      data: { customer }
+    });
+  
+    dialogRef.afterClosed().subscribe(result => {
+      // Hier können Sie auf Ergebnisse reagieren, wenn der Dialog geschlossen wird
+    });
+  }
 }

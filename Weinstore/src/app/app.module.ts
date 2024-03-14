@@ -21,6 +21,7 @@ import { NewWineDialogComponent } from './new-wine-dialog/new-wine-dialog.compon
 import { NewcustomerdialogComponent } from './newcustomerdialog/newcustomerdialog.component';
 import { PortalComponent } from './portal/portal.component';
 import { WinelistComponent } from './winelist/winelist.component';
+import { ShoppingCartDialogComponentComponent } from './shopping-cart-dialog-component/shopping-cart-dialog-component.component';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { WinelistComponent } from './winelist/winelist.component';
     CustomerviewComponent,
     NewcustomerdialogComponent,
     PortalComponent,
+    ShoppingCartDialogComponentComponent,
   ],
   imports: [
     BrowserModule,
