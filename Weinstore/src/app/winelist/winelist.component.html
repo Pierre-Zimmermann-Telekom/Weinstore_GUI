@@ -1,13 +1,35 @@
-
-<mat-form-field class="example-form-field">
-  <mat-label>Suche</mat-label>
-  <input
-    matInput
-    (keyup)="applyFilter($event)"
-    placeholder="Suche nach Name oder Produktnummer"
-  />
-  <button matSuffix mat-button><mat-icon >search</mat-icon></button>
-</mat-form-field>
+<div class="head_container">
+  <div class="home-button">
+    <button mat-fab color="primary" aria-label="Home">
+      <mat-icon>home</mat-icon>
+    </button>
+  </div>
+  <div class="search_add">
+    <mat-form-field
+      class="example-form-field"
+      appearance="fill"
+      style="width: 500px"
+    >
+      <mat-label>Suche</mat-label>
+      <input
+        matInput
+        (keyup)="applyFilter($event)"
+        placeholder="Suche nach Name oder Produktnummer"
+      />
+      <button mat-icon-button matSuffix aria-label="Suche">
+        <mat-icon>search</mat-icon>
+      </button>
+    </mat-form-field>
+    <button
+      mat-icon-button
+      class="add-button-container"
+      aria-label="Hinzufügen"
+      (click)="openNewWineDialog()"
+    >
+      <mat-icon class="add-icon">add</mat-icon>
+    </button>
+  </div>
+</div>
 
 <table mat-table [dataSource]="filteredWines">
   <!-- Produktnummer -->
@@ -71,6 +93,3 @@
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
 </table>
-<button mat-raised-button color="primary" (click)="openNewWineDialog()">
-  Neue Weine hinzufügen
-</button>
