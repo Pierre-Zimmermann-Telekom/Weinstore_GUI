@@ -31,4 +31,19 @@ export interface User {
     Bestand: number;
     Verkaufspreis: string;
   }
+
+export interface customer{
+  Vorname: string;
+  Nachname: string;
+  Postleitzahl: string;
+  Ort: string;
+  Email: string;
+}
+
+export interface vintner{
+  Firmenname: string;
+  Postleitzahl: string;
+  Ort: string;
+  Email: string;
+}
   

@@ -17,6 +17,9 @@ import { MainviewComponent } from './mainview/mainview.component';
 import { WinelistComponent } from './winelist/winelist.component';
 import { NewWineDialogComponent } from './new-wine-dialog/new-wine-dialog.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CustomerviewComponent } from './customerview/customerview.component';
+import { NewcustomerdialogComponent } from './newcustomerdialog/newcustomerdialog.component';
+import { PortalComponent } from './portal/portal.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +28,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MainviewComponent,
     WinelistComponent,
     NewWineDialogComponent,
+    CustomerviewComponent,
+    NewcustomerdialogComponent,
+    PortalComponent,
   ],
   imports: [
     BrowserModule,

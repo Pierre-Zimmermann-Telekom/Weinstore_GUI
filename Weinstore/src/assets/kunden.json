@@ -1,0 +1,24 @@
+[
+    {
+      "Vorname": "Max",
+      "Nachname": "Mustermann",
+      "Postleitzahl": "12345",
+      "Ort": "Musterstadt",
+      "Email": "max.mustermann@example.com"
+    },
+    {
+      "Vorname": "Erika",
+      "Nachname": "Musterfrau",
+      "Postleitzahl": "54321",
+      "Ort": "Musterstadt",
+      "Email": "erika.musterfrau@example.com"
+    },
+    {
+      "Vorname": "John",
+      "Nachname": "Doe",
+      "Postleitzahl": "67890",
+      "Ort": "AnotherCity",
+      "Email": "john.doe@example.com"
+    }
+  ]
+  

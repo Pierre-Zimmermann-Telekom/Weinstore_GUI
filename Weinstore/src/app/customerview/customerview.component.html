@@ -1,0 +1,23 @@
+<!-- customerlist.component.html -->
+<input type="text" placeholder="Suche nach Vorname, Nachname oder E-Mail" [(ngModel)]="searchQuery" (keyup)="filterCustomers()">
+<table>
+  <thead>
+    <tr>
+      <th>Vorname</th>
+      <th>Nachname</th>
+      <th>Postleitzahl</th>
+      <th>Ort</th>
+      <th>E-Mail</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let customer of filteredCustomers">
+      <td>{{ customer.Vorname }}</td>
+      <td>{{ customer.Nachname }}</td>
+      <td>{{ customer.Postleitzahl }}</td>
+      <td>{{ customer.Ort }}</td>
+      <td>{{ customer.Email }}</td>
+    </tr>
+  </tbody>
+</table>
+<button (click)="openNewCustomerDialog()">Neuen Kunden hinzufügen</button>
