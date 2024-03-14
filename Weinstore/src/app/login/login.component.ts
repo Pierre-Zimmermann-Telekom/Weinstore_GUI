@@ -1,22 +1,21 @@
 import { Component } from '@angular/core';
-import { NgForm } from '@angular/forms';
-import { User } from '../interfaces';
 import { Router } from '@angular/router';
+
+import { User } from '../interfaces';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent {
-  user = { email: '', password: '' };
+  user: User = { name: '', password: '' };
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {}
 
   submitForm() {
     // Hier könnten Sie die Benutzereingaben überprüfen oder andere Logik ausführen
     // In diesem Beispiel wird der Benutzer einfach auf eine andere Route weitergeleitet
     this.router.navigate(['/winelist']);
   }
-  
 }
