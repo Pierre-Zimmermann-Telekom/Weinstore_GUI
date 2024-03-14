@@ -16,6 +16,6 @@ export class LoginComponent {
   submitForm() {
     // Hier könnten Sie die Benutzereingaben überprüfen oder andere Logik ausführen
     // In diesem Beispiel wird der Benutzer einfach auf eine andere Route weitergeleitet
-    this.router.navigate(['/winelist']);
+    this.router.navigate(['/portal']);
   }
 }

@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 
 import { DataserviceService } from '../dataservice.service';
 import { customer } from '../interfaces';
 import { NewcustomerdialogComponent } from '../newcustomerdialog/newcustomerdialog.component';
-import { ShoppingCartDialogComponentComponent } from '../shopping-cart-dialog-component/shopping-cart-dialog-component.component';
+import {
+  ShoppingCartDialogComponentComponent,
+} from '../shopping-cart-dialog-component/shopping-cart-dialog-component.component';
+
 @Component({
   selector: 'app-customerview',
   templateUrl: './customerview.component.html',
@@ -17,7 +21,7 @@ export class CustomerviewComponent {
   displayedColumns: string[] = ['Vorname', 'Nachname', 'Postleitzahl', 'Ort', 'Telefonnummer', 'Email', 'Actions'];
 
 
-  constructor(public dialog: MatDialog, private dataservice: DataserviceService) { }
+  constructor(public dialog: MatDialog, private dataservice: DataserviceService,private router: Router) { }
 
   ngOnInit(): void {
     this.dataservice.getKundenData().subscribe(data => {
@@ -66,5 +70,10 @@ export class CustomerviewComponent {
     dialogRef.afterClosed().subscribe(result => {
       // Hier können Sie auf Ergebnisse reagieren, wenn der Dialog geschlossen wird
     });
+  }
+  home() {
+    // Hier könnten Sie die Benutzereingaben überprüfen oder andere Logik ausführen
+    // In diesem Beispiel wird der Benutzer einfach auf eine andere Route weitergeleitet
+    this.router.navigate(['/portal']);
   }
 }

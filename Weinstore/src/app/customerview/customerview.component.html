@@ -1,66 +1,91 @@
-<mat-form-field class="example-form-field">
-    <mat-label>Suche</mat-label>
-    <input
-      matInput
-      (keyup)="applyFilter($event)"
-      placeholder="Suche nach Name oder Produktnummer"
-    />
-    <button matSuffix mat-button><mat-icon >search</mat-icon></button>
-  </mat-form-field>
-  
+<div class="head_container">
+  <div class="home-button">
+    <button mat-fab color="primary" aria-label="Home" (click)="home()">
+      <mat-icon>home</mat-icon>
+    </button>
+  </div>
+  <div class="search_add">
+    <mat-form-field
+      class="example-form-field"
+      appearance="fill"
+      style="width: 500px"
+    >
+      <mat-label>Suche</mat-label>
+      <input
+        matInput
+        (keyup)="applyFilter($event)"
+        placeholder="Suche nach Name oder Email"
+      />
+      <button mat-icon-button matSuffix aria-label="Suche">
+        <mat-icon>search</mat-icon>
+      </button>
+    </mat-form-field>
+    <button
+      mat-icon-button
+      class="add-button-container"
+      aria-label="Hinzufügen"
+      (click)="openNewCustomerDialog()"
+    >
+      <mat-icon class="add-icon">add</mat-icon>
+    </button>
+  </div>
+</div>
+<div class="table">
   <mat-table [dataSource]="filteredCustomers" class="mat-elevation-z8">
     <ng-container matColumnDef="Vorname">
       <mat-header-cell *matHeaderCellDef> Vorname </mat-header-cell>
       <mat-cell *matCellDef="let customer"> {{ customer.Vorname }} </mat-cell>
     </ng-container>
-  
+
     <ng-container matColumnDef="Nachname">
       <mat-header-cell *matHeaderCellDef> Nachname </mat-header-cell>
       <mat-cell *matCellDef="let customer"> {{ customer.Nachname }} </mat-cell>
     </ng-container>
-  
+
     <ng-container matColumnDef="Postleitzahl">
       <mat-header-cell *matHeaderCellDef> Postleitzahl </mat-header-cell>
       <mat-cell *matCellDef="let customer">
         {{ customer.Postleitzahl }}
       </mat-cell>
     </ng-container>
-  
+
     <ng-container matColumnDef="Ort">
       <mat-header-cell *matHeaderCellDef> Ort </mat-header-cell>
       <mat-cell *matCellDef="let customer"> {{ customer.Ort }} </mat-cell>
     </ng-container>
-  
+
     <ng-container matColumnDef="Telefonnummer">
       <mat-header-cell *matHeaderCellDef> Telefonnummer </mat-header-cell>
       <mat-cell *matCellDef="let customer">
         {{ customer.Telefonnummer }}
       </mat-cell>
     </ng-container>
-  
+
     <ng-container matColumnDef="Email">
       <mat-header-cell *matHeaderCellDef> E-Mail </mat-header-cell>
       <mat-cell *matCellDef="let customer"> {{ customer.Email }} </mat-cell>
-    </ng-container> <!-- Hier fehlte das Schließen des ng-container-Elements -->
-    
-    
-  <ng-container matColumnDef="Actions">
-    <mat-header-cell *matHeaderCellDef> Aktionen </mat-header-cell>
-    <mat-cell *matCellDef="let customer">
-      <button mat-icon-button color="primary" (click)="edit()">
-        <mat-icon>edit</mat-icon>
-      </button>
-      <button mat-icon-button color="primary" (click)="openShoppingCartDialog(customer)">
-        <mat-icon>shopping_cart</mat-icon>
-      </button>
-    </mat-cell>
-  </ng-container>
+    </ng-container>
+    <!-- Hier fehlte das Schließen des ng-container-Elements -->
 
-    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <ng-container matColumnDef="Actions">
+      <mat-header-cell *matHeaderCellDef> Aktionen </mat-header-cell>
+      <mat-cell *matCellDef="let customer">
+        <button mat-icon-button color="primary" (click)="edit()">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button
+          mat-icon-button
+          color="primary"
+          (click)="openShoppingCartDialog(customer)"
+        >
+          <mat-icon>shopping_cart</mat-icon>
+        </button>
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row
+      *matHeaderRowDef="displayedColumns; stick: true"
+    ></mat-header-row>
     <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
   </mat-table>
-  
-  <button mat-raised-button color="primary" (click)="openNewCustomerDialog()">
-    Neuen Kunden hinzufügen
-  </button>
-  
+</div>
