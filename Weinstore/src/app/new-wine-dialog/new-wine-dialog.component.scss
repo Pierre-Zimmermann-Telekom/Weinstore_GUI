@@ -1,7 +1,25 @@
+.form-field {
+  margin: 0 10px; /* Hier kannst du den gewünschten Abstand einstellen */
+}
 .container {
+  width: 100%;
+  max-width: 760px; /* Optional: Begrenzt die Breite des Containers */
   margin: 20px;
 }
 
-.form-field {
-  margin: 0 10px; /* Hier kannst du den gewünschten Abstand einstellen */
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.half-width {
+  width: calc(
+    50% - 10px
+  ); /* Berechnung für 2 Formfelder nebeneinander mit 10px Abstand */
 }
