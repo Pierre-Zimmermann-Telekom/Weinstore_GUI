@@ -1,29 +1,35 @@
-<h2>Erstelle einen Beleg für...</h2>
-<p>{{data.customer.Vorname}}</p>
-<p>{{data.customer.Nachname}}</p>
-<h2>Weinliste</h2>
-<table>
-  <thead>
-    <tr>
-      <th>Bezeichnung</th>
-      <th>Verkaufspreis</th>
-      <th>Anzahl</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let wine of wines">
-      <td>{{ wine.Bezeichnung }}</td>
-      <td>{{ wine.Verkaufspreis }}</td>
-      <td>
-        <button (click)="increaseQuantity(wine)">+</button>
-        {{ getQuantity(wine) }}
-        <button (click)="decreaseQuantity(wine)">-</button>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<div class="container">
+  <div class="name">
+    <h2>
+      Erstelle einen Beleg für {{ data.customer.Vorname }}
+      {{ data.customer.Nachname }}
+    </h2>
+  </div>
 
-<button mat-raised-button color="primary">
-  <mat-icon>picture_as_pdf</mat-icon>
-  Print to PDF
-</button>
+  <h2>Weinliste</h2>
+  <table>
+    <thead>
+      <tr>
+        <th class="left">Bezeichnung</th>
+        <th>Verkaufspreis</th>
+        <th>Anzahl</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let wine of wines">
+        <td >{{ wine.Bezeichnung }}</td>
+        <td class="center">{{ wine.Verkaufspreis }}</td>
+        <td class="center">
+          <button (click)="decreaseQuantity(wine)">-</button>
+          {{ getQuantity(wine) }}
+          <button (click)="increaseQuantity(wine)">+</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button mat-raised-button color="primary" style="margin-top: 20px">
+    <mat-icon>picture_as_pdf</mat-icon>
+    Beleg erstellen
+  </button>
+</div>

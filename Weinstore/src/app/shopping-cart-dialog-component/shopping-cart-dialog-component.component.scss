@@ -1,0 +1,16 @@
+.container {
+  margin: 20px;
+}
+table {
+  width: 100%;
+}
+
+td.center {
+  text-align: center;
+}
+
+th.left {
+  text-align: center; /* Zentriert den Text horizontal in der Zelle */
+  position: relative; /* Positionierung relativ zur Zelle */
+  left: -15%; /* Verschiebung um 25% der Zellenbreite nach links */
+}
