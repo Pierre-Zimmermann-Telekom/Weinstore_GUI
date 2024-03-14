@@ -9,7 +9,7 @@ import { User } from '../interfaces';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent {
-  user: User = { name: '', password: '' };
+  user: User = { name: '', usertype: '',password: '' };
 
   constructor(private router: Router) {}
 

@@ -37,6 +37,7 @@ export interface customer{
   Nachname: string;
   Postleitzahl: string;
   Ort: string;
+  Telefonnummer: string;
   Email: string;
 }
 
@@ -44,6 +45,7 @@ export interface vintner{
   Firmenname: string;
   Postleitzahl: string;
   Ort: string;
+  Telefonnummer: string;
   Email: string;
 }
   

@@ -14,6 +14,7 @@ export class NewcustomerdialogComponent {
     "Nachname": "",
     "Postleitzahl": "",
     "Ort": "",
+    "Telefonnummer":"",
     "Email": ""
   };
 
@@ -36,6 +37,7 @@ export class NewcustomerdialogComponent {
       "Nachname": "",
       "Postleitzahl": "",
       "Ort": "",
+      "Telefonnummer":"",
       "Email": ""
     };
   }
