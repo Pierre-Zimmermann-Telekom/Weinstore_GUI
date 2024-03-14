@@ -15,4 +15,7 @@ export class PortalComponent {
   customerview(){
     this.router.navigate(['/customerlist']);
   }
+  logout(){
+    this.router.navigate(['/']);
+  }
 }
