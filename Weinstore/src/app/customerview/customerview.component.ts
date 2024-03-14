@@ -56,4 +56,6 @@ export class CustomerviewComponent {
     dialogRef.afterClosed().subscribe(result => {
     });
   }
+
+  addToCart(customer: customer){}
 }
