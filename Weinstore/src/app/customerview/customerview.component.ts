@@ -8,7 +8,7 @@ import { NewcustomerdialogComponent } from '../newcustomerdialog/newcustomerdial
 @Component({
   selector: 'app-customerview',
   templateUrl: './customerview.component.html',
-  styleUrl: './customerview.component.scss'
+  styleUrls: ['./customerview.component.scss']
 })
 export class CustomerviewComponent {
   customers: customer[] = [];
@@ -56,4 +56,6 @@ export class CustomerviewComponent {
     dialogRef.afterClosed().subscribe(result => {
     });
   }
+  openCustomerDialog(customer: customer){}
+  addToCart(customer: customer){}
 }
