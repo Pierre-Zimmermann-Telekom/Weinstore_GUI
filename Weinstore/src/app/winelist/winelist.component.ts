@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 
 import { DataserviceService } from '../dataservice.service';
 import { Wine_lager } from '../interfaces';
@@ -18,7 +19,8 @@ export class WinelistComponent implements OnInit {
   displayedColumns: string[] = ['Produktnummer', 'Name', 'Jahrgang', 'Region', 'Land', 'Bestand', 'Lagerort', 'Verkaufspreis', 'Einkaufspreis'];
 
 
-  constructor(private http: HttpClient, public dialog: MatDialog, private dataservice: DataserviceService) { }
+  constructor(private http: HttpClient, public dialog: MatDialog, private dataservice: DataserviceService, private router: Router) { }  
+
 
   ngOnInit(): void {
     this.dataservice.getLagerData().subscribe(data => {
@@ -42,5 +44,11 @@ export class WinelistComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
     });
+  }
+
+  home() {
+    // Hier könnten Sie die Benutzereingaben überprüfen oder andere Logik ausführen
+    // In diesem Beispiel wird der Benutzer einfach auf eine andere Route weitergeleitet
+    this.router.navigate(['/portal']);
   }
 }

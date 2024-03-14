@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 82vh;
 }
 
 .square-button {
@@ -14,11 +14,29 @@
   height: 300px;
   margin: 0 20px;
   padding-bottom: 10px;
+  padding-top: 90px;
+  opacity: 80%;
 }
 
 .text {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 50px; /* Automatisch an den unteren Rand verschieben */
+  margin-top: 70px;
+  font-size: 18px;
+}
+
+.header {
+    text-align: center;
+    font-size: 70px;
+    margin-top: 150px;
+    color: white;
+  }
+
+:host {
+  display: block;
+  overflow: hidden;
+  background-image: url('../../assets/wine-background.jpg');
+  background-size: cover;
+  background-position: center;
 }

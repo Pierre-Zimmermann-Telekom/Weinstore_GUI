@@ -1,4 +1,7 @@
 .head_container {
+  position: sticky;
+  z-index: 1000; /* Stelle sicher, dass der Head Container über der Tabelle liegt */
+
   display: flex;
   margin-top: 20px;
   align-items: baseline;
@@ -28,4 +31,15 @@
 }
 .home-button button {
   font-size: 50px; /* Ändere die Schriftgröße des Icons */
+}
+
+.table {
+  max-height: calc(
+    100vh - 150px
+  ); /* Anpassen der maximalen Höhe je nach Bedarf */
+  overflow-y: auto; /* Damit nur das div.scrollbar vertikal scrollbar ist */
+}
+:host {
+  display: block;
+  overflow: hidden;
 }
