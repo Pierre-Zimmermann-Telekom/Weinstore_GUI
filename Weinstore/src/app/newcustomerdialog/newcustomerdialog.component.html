@@ -1,37 +1,44 @@
 <!-- new-customer-dialog.component.html -->
-<h2>Neuen Kunden hinzufügen</h2>
+<div class="container">
+  <h2>Neuen Kunden hinzufügen</h2>
 
-<form>
-  <mat-form-field appearance="fill">
-    <mat-label>Vorname</mat-label>
-    <input matInput placeholder="Vorname" name="Vorname" [(ngModel)]="newCustomer.Vorname">
-  </mat-form-field>
+  <form>
+    <div class="form-row">
+      <mat-form-field appearance="fill" class="half-width">
+        <mat-label>Vorname</mat-label>
+        <input matInput placeholder="Vorname" name="Vorname" [(ngModel)]="newCustomer.Vorname" />
+      </mat-form-field>
 
-  <mat-form-field appearance="fill">
-    <mat-label>Nachname</mat-label>
-    <input matInput placeholder="Nachname" name="Nachname" [(ngModel)]="newCustomer.Nachname">
-  </mat-form-field>
+      <mat-form-field appearance="fill" class="half-width">
+        <mat-label>Nachname</mat-label>
+        <input matInput placeholder="Nachname" name="Nachname" [(ngModel)]="newCustomer.Nachname" />
+      </mat-form-field>
+    </div>
 
-  <mat-form-field appearance="fill">
-    <mat-label>Postleitzahl</mat-label>
-    <input matInput placeholder="Postleitzahl" name="Postleitzahl" [(ngModel)]="newCustomer.Postleitzahl">
-  </mat-form-field>
+    <div class="form-row">
+      <mat-form-field appearance="fill" class="half-width">
+        <mat-label>Postleitzahl</mat-label>
+        <input matInput placeholder="Postleitzahl" name="Postleitzahl" [(ngModel)]="newCustomer.Postleitzahl" />
+      </mat-form-field>
 
-  <mat-form-field appearance="fill">
-    <mat-label>Ort</mat-label>
-    <input matInput placeholder="Ort" name="Ort" [(ngModel)]="newCustomer.Ort">
-  </mat-form-field>
+      <mat-form-field appearance="fill" class="half-width">
+        <mat-label>Ort</mat-label>
+        <input matInput placeholder="Ort" name="Ort" [(ngModel)]="newCustomer.Ort" />
+      </mat-form-field>
+    </div>
 
-  <mat-form-field appearance="fill">
-    <mat-label>Telefonnummer</mat-label>
-    <input matInput placeholder="Telefonnummer" name="Telefonnummer" [(ngModel)]="newCustomer.Telefonnummer">
-  </mat-form-field>
+    <div class="form-row">
+      <mat-form-field appearance="fill" class="half-width">
+        <mat-label>Telefonnummer</mat-label>
+        <input matInput placeholder="Telefonnummer" name="Telefonnummer" [(ngModel)]="newCustomer.Telefonnummer" />
+      </mat-form-field>
 
-  <mat-form-field appearance="fill">
-    <mat-label>E-Mail</mat-label>
-    <input matInput placeholder="E-Mail" name="Email" [(ngModel)]="newCustomer.Email">
-  </mat-form-field>
+      <mat-form-field appearance="fill" class="half-width">
+        <mat-label>E-Mail</mat-label>
+        <input matInput placeholder="E-Mail" name="Email" [(ngModel)]="newCustomer.Email" />
+      </mat-form-field>
+    </div>
 
-  <button mat-button (click)="addNewCustomer()">Hinzufügen</button>
-  <button mat-button (click)="closeNewCustomerDialog()">Abbrechen</button>
-</form>
+    <button mat-raised-button class="primary" (click)="addNewCustomer()">Hinzufügen</button>
+  </form>
+</div>

@@ -1,0 +1,22 @@
+/* CSS */
+.container {
+  width: 100%;
+  max-width: 760px;
+  margin: 20px;
+}
+
+.form-row {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.half-width {
+  width: calc(
+    50% - 10px
+  ); /* Berechnung für 2 Formfelder nebeneinander mit 10px Abstand */
+  margin-right: 20px; /* Abstand zwischen den Formfeldern */
+}
+
+button.primary {
+  margin-top: 20px; /* Abstand zum letzten Formularfeld */
+}
