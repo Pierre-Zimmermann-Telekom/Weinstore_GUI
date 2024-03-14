@@ -53,5 +53,115 @@
     "Lagerort": "Keller 5",
     "Verkaufspreis": "600.00",
     "Einkaufspreis": "400.00"
+  },
+  {
+    "Produktnummer": "11111",
+    "Bezeichnung": "Château Margaux",
+    "Jahrgang": "2014",
+    "Region": "Bordeaux",
+    "Land": "Frankreich",
+    "Bestand": 12,
+    "Lagerort": "Keller 6",
+    "Verkaufspreis": "550.00",
+    "Einkaufspreis": "380.00"
+  },
+  {
+    "Produktnummer": "22222",
+    "Bezeichnung": "Domaine de la Romanée-Conti",
+    "Jahrgang": "2013",
+    "Region": "Burgund",
+    "Land": "Frankreich",
+    "Bestand": 8,
+    "Lagerort": "Keller 7",
+    "Verkaufspreis": "1200.00",
+    "Einkaufspreis": "900.00"
+  },
+  {
+    "Produktnummer": "33333",
+    "Bezeichnung": "Château d'Yquem",
+    "Jahrgang": "2016",
+    "Region": "Sauternes",
+    "Land": "Frankreich",
+    "Bestand": 6,
+    "Lagerort": "Keller 8",
+    "Verkaufspreis": "800.00",
+    "Einkaufspreis": "600.00"
+  },
+  {
+    "Produktnummer": "44444",
+    "Bezeichnung": "Biondi-Santi Brunello di Montalcino",
+    "Jahrgang": "2015",
+    "Region": "Toskana",
+    "Land": "Italien",
+    "Bestand": 10,
+    "Lagerort": "Keller 9",
+    "Verkaufspreis": "450.00",
+    "Einkaufspreis": "300.00"
+  },
+  {
+    "Produktnummer": "55555",
+    "Bezeichnung": "Petrus",
+    "Jahrgang": "2012",
+    "Region": "Bordeaux",
+    "Land": "Frankreich",
+    "Bestand": 5,
+    "Lagerort": "Keller 10",
+    "Verkaufspreis": "3000.00",
+    "Einkaufspreis": "2500.00"
+  },
+  {
+    "Produktnummer": "66666",
+    "Bezeichnung": "Catena Zapata Malbec Argentino",
+    "Jahrgang": "2017",
+    "Region": "Mendoza",
+    "Land": "Argentinien",
+    "Bestand": 15,
+    "Lagerort": "Keller 11",
+    "Verkaufspreis": "200.00",
+    "Einkaufspreis": "150.00"
+  },
+  {
+    "Produktnummer": "77777",
+    "Bezeichnung": "Caymus Vineyards Cabernet Sauvignon",
+    "Jahrgang": "2014",
+    "Region": "Napa Valley",
+    "Land": "USA",
+    "Bestand": 20,
+    "Lagerort": "Keller 12",
+    "Verkaufspreis": "150.00",
+    "Einkaufspreis": "100.00"
+  },
+  {
+    "Produktnummer": "88888",
+    "Bezeichnung": "Screaming Eagle Cabernet Sauvignon",
+    "Jahrgang": "2016",
+    "Region": "Napa Valley",
+    "Land": "USA",
+    "Bestand": 3,
+    "Lagerort": "Keller 13",
+    "Verkaufspreis": "5000.00",
+    "Einkaufspreis": "4000.00"
+  },
+  {
+    "Produktnummer": "99999",
+    "Bezeichnung": "Antinori Tignanello",
+    "Jahrgang": "2018",
+    "Region": "Toskana",
+    "Land": "Italien",
+    "Bestand": 7,
+    "Lagerort": "Keller 14",
+    "Verkaufspreis": "180.00",
+    "Einkaufspreis": "120.00"
+  },
+  {
+    "Produktnummer": "101010",
+    "Bezeichnung": "Almaviva",
+    "Jahrgang": "2016",
+    "Region": "Maipo Valley",
+    "Land": "Chile",
+    "Bestand": 9,
+    "Lagerort": "Keller 15",
+    "Verkaufspreis": "250.00",
+    "Einkaufspreis": "180.00"
   }
 ]
