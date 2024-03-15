@@ -19,6 +19,7 @@ export class ShoppingCartDialogComponentComponent {
   ) {
     this.dataService.getLagerData().subscribe(wines => {
       this.wines = wines;
+      console.log("WINES\n" + wines)
     });
   }
 
